@@ -97,7 +97,7 @@ public class LoginController {
             }
         } else if ((usernameTextField.getText().equals("Control Room Operator")) && (passwordTextField.getText().equals("1234"))) {
             try {
-                FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Tabib/ControlRoomOperator.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Tabib/ControlRoomOperatorDashboard.fxml"));
                 Scene nextScene = new Scene(fxmlLoader.load());
                 Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
                 nextStage.setTitle("Control Room Operator Dashboard");
