@@ -5,10 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
@@ -50,12 +47,19 @@ public class AddPersonController
     private TextField nationalityField;
     @javafx.fxml.FXML
     private Label textLabel;
+    @javafx.fxml.FXML
+    private TableColumn<Person, String> typeCol;
+    @javafx.fxml.FXML
+    private ComboBox<String> typeCombo;
 
     private List<Person> personList = new ArrayList<>();
 
 
     @javafx.fxml.FXML
     public void initialize() {
+
+        typeCombo.getItems().addAll("Staff", "Visitor", "Contractor");
+
         nameCol.setCellValueFactory(new PropertyValueFactory<>("name"));
         nidCol.setCellValueFactory(new PropertyValueFactory<>("nidNo"));
         passportCol.setCellValueFactory(new PropertyValueFactory<>("passportNo"));
@@ -63,6 +67,7 @@ public class AddPersonController
         emailCol.setCellValueFactory(new PropertyValueFactory<>("email"));
         nationalityCol.setCellValueFactory(new PropertyValueFactory<>("nationality"));
         addressCol.setCellValueFactory(new PropertyValueFactory<>("address"));
+        typeCol.setCellValueFactory(new PropertyValueFactory<>("type"));
 
         try(ObjectInputStream stream = new ObjectInputStream(
                 new FileInputStream("person.bin")
@@ -106,6 +111,7 @@ public class AddPersonController
             String email = emailField.getText();
             String nationality = nationalityField.getText();
             String address = addressField.getText();
+            String type = typeCombo.getValue();
 
             if (nameField.getText().isEmpty()){
                 textLabel.setText("Enter Name");
@@ -143,7 +149,12 @@ public class AddPersonController
                 return;
             }
 
-            Person p = new Person(name, NID, passport, phoneNo, email, nationality, address);
+            else if (typeCombo.getValue()==null) {
+                textLabel.setText("Enter Type");
+                return;
+            }
+
+            Person p = new Person(name, NID, passport, phoneNo, email, nationality, address, type);
             personList.add(p);
             personTable.getItems().add(p);
 

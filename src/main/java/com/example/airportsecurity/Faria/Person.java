@@ -3,9 +3,9 @@ package com.example.airportsecurity.Faria;
 import java.io.Serializable;
 
 public class Person implements Serializable {
-    String name, phoneNo, nidNo, passportNo, email, address, nationality;
+    String name, phoneNo, nidNo, passportNo, email, address, nationality, type;
 
-    public Person(String name, String phoneNo, String nidNo, String passportNo, String email, String address, String nationality) {
+    public Person(String name, String phoneNo, String nidNo, String passportNo, String email, String address, String nationality, String type) {
         this.name = name;
         this.phoneNo = phoneNo;
         this.nidNo = nidNo;
@@ -13,6 +13,7 @@ public class Person implements Serializable {
         this.email = email;
         this.address = address;
         this.nationality = nationality;
+        this.type = type;
     }
 
     public String getName() {
@@ -71,6 +72,14 @@ public class Person implements Serializable {
         this.nationality = nationality;
     }
 
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
     @Override
     public String toString() {
         return "Person{" +
@@ -81,6 +90,7 @@ public class Person implements Serializable {
                 ", email='" + email + '\'' +
                 ", address='" + address + '\'' +
                 ", nationality='" + nationality + '\'' +
+                ", type='" + type + '\'' +
                 '}';
     }
 }
