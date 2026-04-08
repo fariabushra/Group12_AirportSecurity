@@ -5,7 +5,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="435.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.airportsecurity.Faria.CheckpostOfficerController">
    <children>
       <TextField layoutX="108.0" layoutY="23.0" prefHeight="57.0" prefWidth="404.0" text="Checkpost Officer Dashboard">
@@ -13,17 +12,17 @@
             <Font name="System Bold Italic" size="27.0" />
          </font>
       </TextField>
-      <Button layoutX="48.0" layoutY="103.0" mnemonicParsing="false" onAction="#identityOnAction" prefHeight="39.0" prefWidth="165.0" text="Identity Verification">
+      <Button layoutX="63.0" layoutY="102.0" mnemonicParsing="false" onAction="#addPersonOnAction" prefHeight="39.0" prefWidth="134.0" text="Add Person">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
-      <Button layoutX="51.0" layoutY="175.0" mnemonicParsing="false" onAction="#vehicleOnAction" prefHeight="39.0" prefWidth="158.0" text="Vehicle Entry/Exit">
+      <Button layoutX="51.0" layoutY="175.0" mnemonicParsing="false" onAction="#identityVerificationOnAction" prefHeight="39.0" prefWidth="166.0" text="Identity Verification">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
-      <Button layoutX="51.0" layoutY="250.0" mnemonicParsing="false" onAction="#reportActivityOnAction" prefHeight="39.0" prefWidth="158.0" text="Report Activity">
+      <Button layoutX="400.0" layoutY="102.0" mnemonicParsing="false" onAction="#reportActivityOnAction" prefHeight="39.0" prefWidth="158.0" text="Report Activity">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
@@ -33,7 +32,7 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </Button>
-      <Button layoutX="414.0" layoutY="103.0" mnemonicParsing="false" onAction="#securityAlertOnAction" prefHeight="38.0" prefWidth="133.0" text="Security Alerts">
+      <Button layoutX="49.0" layoutY="250.0" mnemonicParsing="false" onAction="#vehicleOnAction" prefHeight="38.0" prefWidth="158.0" text="Vehicle Entry/Exit">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>

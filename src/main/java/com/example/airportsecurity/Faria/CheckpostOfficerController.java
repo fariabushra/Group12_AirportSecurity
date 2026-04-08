@@ -8,7 +8,7 @@ public class CheckpostOfficerController
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void identityOnAction(ActionEvent actionEvent) {
     }
 
@@ -40,7 +40,15 @@ public class CheckpostOfficerController
     public void logOut(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void securityAlertOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void identityVerificationOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void addPersonOnAction(ActionEvent actionEvent) {
     }
 }
