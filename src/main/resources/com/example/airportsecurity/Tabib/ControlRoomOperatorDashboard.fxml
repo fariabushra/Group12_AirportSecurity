@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.airportsecurity.Tabib.ControlRoomDashboardController">
+
+    <children>
+        <Label layoutX="180.0" layoutY="20.0" text="Control Room Operator">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <Button layoutX="80.0" layoutY="90.0" onAction="#mlcfButton" prefHeight="40.0" prefWidth="180.0" text="Monitor Live CCTV Feeds" />
+        <Button layoutX="312.0" layoutY="90.0" onAction="#fsaarButton" prefHeight="40.0" prefWidth="202.0" text="Flag suspicious activity and record" />
+
+        <Button layoutX="81.0" layoutY="150.0" onAction="#asaButton" prefHeight="40.0" prefWidth="180.0" text="Automatic security alerts" />
+        <Button layoutX="313.0" layoutY="150.0" onAction="#cwfuButton" prefHeight="40.0" prefWidth="187.0" text="Coordinate with field units" />
+
+        <Button layoutX="80.0" layoutY="210.0" onAction="#tipButton" prefHeight="40.0" prefWidth="180.0" text="Track incident progress" />
+        <Button layoutX="311.0" layoutY="210.0" onAction="#reaaButton" prefHeight="40.0" prefWidth="234.0" text="Report emergency and announcement" />
+
+        <Button layoutX="80.0" layoutY="270.0" prefHeight="40.0" prefWidth="180.0" text="Generate shift report" />
+        <Button layoutX="310.0" layoutY="270.0" onAction="#shtnoButton" prefHeight="40.0" prefWidth="222.0" text="Secure handover to next operator" />
+
+        <Button layoutX="240.0" layoutY="330.0" onAction="#logoutButton" prefHeight="40.0" prefWidth="120.0" text="Logout" />
+    </children>
+
+</AnchorPane>
