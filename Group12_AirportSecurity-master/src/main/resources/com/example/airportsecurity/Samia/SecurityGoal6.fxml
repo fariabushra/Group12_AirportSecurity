@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.airportsecurity.Samia.SecurityGoal6Controller">
+    <children>
+        <Label layoutX="30.0" layoutY="30.0" text="Goal 6: Trigger Emergency Alert" textFill="RED">
+            <font><Font name="System Bold" size="22.0" /></font>
+        </Label>
+        <VBox layoutX="30.0" layoutY="90.0" spacing="20.0">
+            <children>
+                <ComboBox fx:id="typeCombo" prefWidth="300.0" promptText="Select Alert Type" />
+                <TextField fx:id="locationField" prefWidth="300.0" promptText="Exact Location (e.g. Gate 12)" />
+                <ComboBox fx:id="severityCombo" prefWidth="300.0" promptText="Select Severity Level" />
+                <Button onAction="#triggerAlertOnAction" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-weight: bold;" text="DISPATCH ALERT" />
+            </children>
+        </VBox>
+        <Button layoutX="520.0" layoutY="350.0" onAction="#goBackOnAction" text="Back" />
+    </children>
+</AnchorPane>

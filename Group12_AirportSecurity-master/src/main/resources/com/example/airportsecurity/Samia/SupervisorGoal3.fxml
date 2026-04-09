@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="450.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.airportsecurity.Samia.SupervisorGoal3Controller">
+    <children>
+        <Label layoutX="30.0" layoutY="20.0" text="Goal 3: Patrol History Review">
+            <font><Font name="System Bold" size="20.0" /></font>
+        </Label>
+        <TableView fx:id="patrolTable" layoutX="30.0" layoutY="70.0" prefHeight="300.0" prefWidth="590.0">
+            <columns>
+                <TableColumn fx:id="timeCol" prefWidth="150.0" text="Time" />
+                <TableColumn fx:id="zoneCol" prefWidth="150.0" text="Zone" />
+                <TableColumn fx:id="statusCol" prefWidth="288.0" text="Status" />
+            </columns>
+        </TableView>
+        <Button layoutX="570.0" layoutY="390.0" onAction="#goBackOnAction" text="Back" />
+    </children>
+</AnchorPane>

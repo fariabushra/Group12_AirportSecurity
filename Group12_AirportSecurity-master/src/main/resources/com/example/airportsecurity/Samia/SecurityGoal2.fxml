@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.airportsecurity.Samia.SecurityGoal2Controller">
+    <children>
+        <Label layoutX="30.0" layoutY="30.0" text="Goal 2: Lost &amp; Found Entry">
+            <font><Font name="System Bold" size="20.0" /></font>
+        </Label>
+        <VBox layoutX="30.0" layoutY="80.0" spacing="15.0">
+            <children>
+                <TextField fx:id="itemNameField" prefWidth="400.0" promptText="Item Name (e.g. Wallet)" />
+                <TextField fx:id="categoryField" prefWidth="400.0" promptText="Category (e.g. Personal)" />
+                <TextField fx:id="locationField" prefWidth="400.0" promptText="Location Found (e.g. Gate 5)" />
+                <Button onAction="#saveItemOnAction" style="-fx-background-color: #3498db; -fx-text-fill: white;" text="Register Item" />
+            </children>
+        </VBox>
+        <Button layoutX="520.0" layoutY="350.0" onAction="#goBackOnAction" text="Back" />
+    </children>
+</AnchorPane>
