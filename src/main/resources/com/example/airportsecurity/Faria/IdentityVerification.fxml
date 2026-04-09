@@ -48,6 +48,6 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Label fx:id="identifyLabel" layoutX="92.0" layoutY="386.0" prefHeight="26.0" prefWidth="246.0" style="-fx-background-color: blue;" />
+      <Label fx:id="identifyLabel" layoutX="92.0" layoutY="386.0" prefHeight="26.0" prefWidth="246.0" style="-fx-background-color: yellow;" />
    </children>
 </AnchorPane>
