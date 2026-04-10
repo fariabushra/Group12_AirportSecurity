@@ -86,35 +86,31 @@ public class IdentityVerificationController
         String inputPassport = passportField.getText();
         String inputType = typeCombo.getValue();
 
-        // Validation
         if (inputPassport.isEmpty() || inputType == null) {
             loadLabel.setText("Please provide both Passport and Type!");
             return;
         }
 
-        personTable.getItems().clear(); // Clear previous search results
+        personTable.getItems().clear();
         boolean found = false;
 
-        // 3. READ AND FILTER LOGIC
-        // We open the file and read objects one by one to find a match
+
         try (ObjectInputStream stream = new ObjectInputStream(
                 new FileInputStream("person.bin")
         )) {
             while (true) {
                 Person p = (Person) stream.readObject();
 
-                // Check if this person matches the search criteria
                 if (p.getPassportNo().equalsIgnoreCase(inputPassport) &&
                         p.getType().equalsIgnoreCase(inputType)) {
 
                     personTable.getItems().add(p);
                     loadLabel.setText("Match Found! Identity Verified.");
                     found = true;
-                    break; // Stop reading once we find the person
+                    break;
                 }
             }
         } catch (EOFException e) {
-            // This is reached if the loop finishes without finding a match (End of File)
             if (!found) {
                 loadLabel.setText("No matching record found in the system.");
             }

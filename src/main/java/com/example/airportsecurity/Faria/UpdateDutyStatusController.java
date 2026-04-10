@@ -73,7 +73,7 @@ public class UpdateDutyStatusController {
                 e.printStackTrace();
             }
         } else {
-            currentStatusLabel.setText("Current Status: Off Duty"); // Default
+            currentStatusLabel.setText("Current Status: Off Duty");
         }
     }
 

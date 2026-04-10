@@ -154,7 +154,7 @@ public class AddPersonController
                 return;
             }
 
-            Person p = new Person(name, NID, passport, phoneNo, email, nationality, address, type);
+            Person p = new Person(name, phoneNo, NID, passport, email, nationality, address, type);
             personList.add(p);
             personTable.getItems().add(p);
 
@@ -176,6 +176,8 @@ public class AddPersonController
             }
 
             textLabel.setText("Person data saved to bin file!");
+
+            personTable.getItems().clear();
 
         } catch (IOException e) {
             e.printStackTrace();
