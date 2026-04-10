@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.airportsecurity.Faria.UpdateDutyStatusController">
+   <children>
+      <Label fx:id="currentStatusLabel" layoutX="99.0" layoutY="54.0" prefHeight="37.0" prefWidth="167.0" style="-fx-border-color: green;" />
+      <ComboBox fx:id="statusComboBox" layoutX="99.0" layoutY="134.0" prefHeight="38.0" prefWidth="222.0" promptText="Update Duty Status" />
+      <Button layoutX="248.0" layoutY="230.0" mnemonicParsing="false" onAction="#updateStatusButton" prefHeight="38.0" prefWidth="90.0" text="Update">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="476.0" layoutY="360.0" mnemonicParsing="false" onAction="#dashboardButton" text="&lt;&lt;Dashboard">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

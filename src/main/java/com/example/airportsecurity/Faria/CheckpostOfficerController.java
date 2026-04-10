@@ -62,6 +62,16 @@ public class CheckpostOfficerController
 
     @javafx.fxml.FXML
     public void dutyStatusOnAction(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Faria/updateDutyStatus.fxml"));
+            Scene nextScene = new Scene(fxmlLoader.load());
+            Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            nextStage.setTitle("Update Duty Status");
+            nextStage.setScene(nextScene);
+            nextStage.show();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @javafx.fxml.FXML

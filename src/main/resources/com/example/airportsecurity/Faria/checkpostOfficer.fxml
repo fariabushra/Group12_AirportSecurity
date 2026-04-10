@@ -47,7 +47,7 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </Button>
-      <Button layoutX="411.0" layoutY="250.0" mnemonicParsing="false" onAction="#dutyStatusOnAction" prefHeight="39.0" prefWidth="150.0" text="Duty Status">
+      <Button layoutX="395.0" layoutY="250.0" mnemonicParsing="false" onAction="#dutyStatusOnAction" prefHeight="39.0" prefWidth="172.0" text="Update Duty Status">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
