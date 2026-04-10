@@ -37,7 +37,7 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </Button>
-      <Button layoutX="411.0" layoutY="175.0" mnemonicParsing="false" onAction="#denyFormOnAction" prefHeight="39.0" prefWidth="150.0" text="Deny Entry Form">
+      <Button layoutX="411.0" layoutY="175.0" mnemonicParsing="false" onAction="#denyFormOnAction" prefHeight="39.0" prefWidth="150.0" text="Deny Entry Case">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
