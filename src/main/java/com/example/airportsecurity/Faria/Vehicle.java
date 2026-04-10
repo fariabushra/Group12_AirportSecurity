@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class Vehicle implements Serializable {
 
-    String vehicleNo, vehicleType, driverName, driverID, entryExit;
+    private String vehicleNo, vehicleType, driverName, driverID, entryExit;
 
     public Vehicle(String vehicleNo, String vehicleType, String driverName, String driverID, String entryExit) {
         this.vehicleNo = vehicleNo;

@@ -16,6 +16,16 @@ public class CheckpostOfficerController
 
     @javafx.fxml.FXML
     public void dutyOnAction(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Faria/dutySchedule.fxml"));
+            Scene nextScene = new Scene(fxmlLoader.load());
+            Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            nextStage.setTitle("Duty Schedule");
+            nextStage.setScene(nextScene);
+            nextStage.show();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @javafx.fxml.FXML
@@ -28,7 +38,7 @@ public class CheckpostOfficerController
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Faria/vehicleEntryExit.fxml"));
             Scene nextScene = new Scene(fxmlLoader.load());
             Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-            nextStage.setTitle("Vehicle Entry/Exit Dashboard");
+            nextStage.setTitle("Vehicle Entry/Exit");
             nextStage.setScene(nextScene);
             nextStage.show();
         } catch (Exception e) {

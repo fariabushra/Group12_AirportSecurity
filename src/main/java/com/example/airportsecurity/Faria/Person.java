@@ -3,7 +3,7 @@ package com.example.airportsecurity.Faria;
 import java.io.Serializable;
 
 public class Person implements Serializable {
-    String name, phoneNo, nidNo, passportNo, email, address, nationality, type;
+    private String name, phoneNo, nidNo, passportNo, email, address, nationality, type;
 
     public Person(String name, String phoneNo, String nidNo, String passportNo, String email, String address, String nationality, String type) {
         this.name = name;
