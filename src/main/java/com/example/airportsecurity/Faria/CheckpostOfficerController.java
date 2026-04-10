@@ -30,6 +30,16 @@ public class CheckpostOfficerController
 
     @javafx.fxml.FXML
     public void messageOnAction(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Faria/messageSupervisor.fxml"));
+            Scene nextScene = new Scene(fxmlLoader.load());
+            Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            nextStage.setTitle("Message Supervisor");
+            nextStage.setScene(nextScene);
+            nextStage.show();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @javafx.fxml.FXML
@@ -90,6 +100,16 @@ public class CheckpostOfficerController
 
     @javafx.fxml.FXML
     public void logOut(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("login.fxml"));
+            Scene nextScene = new Scene(fxmlLoader.load());
+            Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            nextStage.setTitle("Login");
+            nextStage.setScene(nextScene);
+            nextStage.show();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
 

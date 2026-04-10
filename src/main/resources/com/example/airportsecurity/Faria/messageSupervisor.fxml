@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="414.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.airportsecurity.Faria.MessageSupervisorController">
+   <children>
+      <Label layoutX="76.0" layoutY="93.0" text="Message Subject:" />
+      <Label layoutX="78.0" layoutY="157.0" text="Message Details:" />
+      <TextField fx:id="subjectField" layoutX="186.0" layoutY="82.0" prefHeight="38.0" prefWidth="245.0" />
+      <TextArea fx:id="detailsArea" layoutX="186.0" layoutY="157.0" prefHeight="92.0" prefWidth="379.0" />
+      <Button layoutX="290.0" layoutY="318.0" mnemonicParsing="false" onAction="#sendMessageButton" text="Send Message">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="495.0" layoutY="374.0" mnemonicParsing="false" onAction="#dashboardButton" text="&lt;&lt;Dashboard">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label fx:id="statusLabel" layoutX="47.0" layoutY="271.0" prefHeight="38.0" prefWidth="290.0" style="-fx-background-color: yellow;" />
+   </children>
+</AnchorPane>
