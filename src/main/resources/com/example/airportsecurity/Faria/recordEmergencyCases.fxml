@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="533.0" prefWidth="757.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.airportsecurity.Faria.RecordEmergencyCasesController">
+   <children>
+      <Label layoutX="50.0" layoutY="28.0" text="Patient name:" />
+      <Label layoutX="50.0" layoutY="67.0" text="Patient ID:" />
+      <Label layoutX="50.0" layoutY="111.0" text="Emergency Type:" />
+      <Label layoutX="350.0" layoutY="28.0" text="Severity:" />
+      <Label layoutX="350.0" layoutY="67.0" text="Initial Observation:" />
+      <TextField fx:id="nameField" layoutX="135.0" layoutY="24.0" />
+      <TextField fx:id="idField" layoutX="123.0" layoutY="63.0" />
+      <ComboBox fx:id="typeCombo" layoutX="150.0" layoutY="107.0" prefWidth="150.0" />
+      <ComboBox fx:id="severityCombo" layoutX="413.0" layoutY="24.0" prefWidth="150.0" />
+      <TextField fx:id="observeField" layoutX="458.0" layoutY="63.0" prefHeight="36.0" prefWidth="194.0" />
+      <Button layoutX="301.0" layoutY="155.0" mnemonicParsing="false" onAction="#addCaseButton" prefHeight="36.0" prefWidth="90.0" text="Add Case">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="validationLabel" layoutX="451.0" layoutY="164.0" prefHeight="26.0" prefWidth="217.0" style="-fx-background-color: yellow;" />
+      <TableView fx:id="caseTable" layoutX="23.0" layoutY="227.0" prefHeight="200.0" prefWidth="723.0">
+        <columns>
+          <TableColumn fx:id="nameCol" prefWidth="161.5999698638916" text="Patient Name" />
+          <TableColumn fx:id="idCol" prefWidth="96.80001831054688" text="Patient ID" />
+            <TableColumn fx:id="typeCol" prefWidth="163.2000732421875" text="Emergency Type" />
+            <TableColumn fx:id="severityCol" prefWidth="124.80001831054688" text="Severity" />
+            <TableColumn fx:id="observeCol" prefWidth="177.60003662109375" text="Initial Observation" />
+        </columns>
+      </TableView>
+      <Button layoutX="305.0" layoutY="444.0" mnemonicParsing="false" onAction="#recordCaseButton" prefHeight="36.0" prefWidth="108.0" text="Record Case">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="615.0" layoutY="490.0" mnemonicParsing="false" onAction="#dashboardButton" prefHeight="26.0" prefWidth="108.0" text="&lt;&lt;Dashboard">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
