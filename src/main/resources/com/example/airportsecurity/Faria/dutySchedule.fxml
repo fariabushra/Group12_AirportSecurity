@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="467.0" prefWidth="634.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.airportsecurity.Faria.DutyScheduleController">
+<AnchorPane prefHeight="467.0" prefWidth="631.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.airportsecurity.Faria.DutyScheduleController">
    <children>
       <Label layoutX="63.0" layoutY="41.0" text="Officer ID:" />
       <TextField fx:id="officerIDField" layoutX="135.0" layoutY="37.0" />
@@ -18,12 +18,12 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <TableView fx:id="scheduleTable" layoutX="26.0" layoutY="199.0" prefHeight="200.0" prefWidth="581.0">
+      <TableView fx:id="scheduleTable" layoutX="21.0" layoutY="200.0" prefHeight="200.0" prefWidth="588.0">
         <columns>
-          <TableColumn fx:id="officerIDCol" prefWidth="106.40002822875977" text="Officer ID" />
           <TableColumn fx:id="dateCol" prefWidth="145.59996032714844" text="Date" />
             <TableColumn fx:id="shiftCol" prefWidth="160.79998779296875" text="Shift Time" />
             <TableColumn fx:id="locationCol" prefWidth="171.2000732421875" text="Duty Location " />
+          <TableColumn fx:id="officerIDCol" prefWidth="106.40002822875977" text="Officer ID" />
         </columns>
       </TableView>
       <Button layoutX="517.0" layoutY="425.0" mnemonicParsing="false" onAction="#dashboardButton" text="&lt;&lt;Dashboard">
