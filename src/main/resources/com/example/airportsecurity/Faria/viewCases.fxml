@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="471.0" prefWidth="786.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.airportsecurity.Faria.ViewCasesController">
+   <children>
+      <Label layoutX="105.0" layoutY="52.0" text="Patient ID:" />
+      <TextField fx:id="idField" layoutX="184.0" layoutY="48.0" />
+      <Button layoutX="342.0" layoutY="112.0" mnemonicParsing="false" onAction="#viewCaseButton" text="View Case">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <TableView fx:id="caseTable" layoutX="31.0" layoutY="192.0" prefHeight="200.0" prefWidth="723.0">
+         <columns>
+            <TableColumn fx:id="nameCol" prefWidth="161.5999698638916" text="Patient Name" />
+            <TableColumn fx:id="idCol" prefWidth="96.80001831054688" text="Patient ID" />
+            <TableColumn fx:id="typeCol" prefWidth="163.2000732421875" text="Emergency Type" />
+            <TableColumn fx:id="severityCol" prefWidth="124.80001831054688" text="Severity" />
+            <TableColumn fx:id="observeCol" prefWidth="177.60003662109375" text="Initial Observation" />
+         </columns>
+      </TableView>
+      <Button layoutX="667.0" layoutY="432.0" mnemonicParsing="false" onAction="#dashboardButton" text="&lt;&lt;Dashboard">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label fx:id="showTextLabel" layoutX="464.0" layoutY="111.0" prefHeight="30.0" prefWidth="282.0" style="-fx-background-color: yellow;" />
+   </children>
+</AnchorPane>
