@@ -120,7 +120,7 @@ public class LoginController {
             }
         } else if ((usernameTextField.getText().equals("Commanding Officer")) && (passwordTextField.getText().equals("1234"))) {
             try {
-                FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Habib/CommandingOfficer.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Ahsan/CommandingOfficer/dashboard.fxml"));
                 Scene nextScene = new Scene(fxmlLoader.load());
                 Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
                 nextStage.setTitle("Commanding Officer Dashboard");

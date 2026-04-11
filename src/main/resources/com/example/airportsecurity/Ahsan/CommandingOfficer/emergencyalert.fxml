@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.airportsecurity.Ahsan.CommandingOfficer.EmergencyalertController"
+            prefHeight="400.0" prefWidth="600.0" >
+
+    <Label text="Manage Emergency Alerts"
+           layoutX="20" layoutY="10"
+           style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+    <Label text="Alert Type:" layoutX="20" layoutY="60"/>
+    <ComboBox fx:id="typeBox"
+              layoutX="120" layoutY="55"
+              prefWidth="200"/>
+
+    <Label text="Message:" layoutX="20" layoutY="100"/>
+    <TextField fx:id="messageField"
+               layoutX="120" layoutY="95"
+               prefWidth="300"/>
+
+    <Button text="Send Alert"
+            layoutX="450" layoutY="75"
+            prefWidth="150"
+            onAction="#handleSend"/>
+
+    <Label fx:id="statusLabel"
+           layoutX="20" layoutY="140"
+           style="-fx-font-weight: bold;" />
+
+    <TableView fx:id="alertTable"
+               layoutX="20" layoutY="180"
+               prefWidth="650" prefHeight="280">
+
+        <columns>
+            <TableColumn fx:id="typeColumn"
+                         text="Type"
+                         prefWidth="200"/>
+            <TableColumn fx:id="messageColumn"
+                         text="Message"
+                         prefWidth="450"/>
+        </columns>
+
+    </TableView>
+
+</AnchorPane>
