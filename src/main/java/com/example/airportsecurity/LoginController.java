@@ -109,7 +109,7 @@ public class LoginController {
             usernameTextField.setText("Login Successful");
         } else if ((usernameTextField.getText().equals("IT Administrator")) && (passwordTextField.getText().equals("1234"))) {
             try {
-                FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Tabib/ITAdministrator.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Tabib/ITAdministratorDashboard.fxml"));
                 Scene nextScene = new Scene(fxmlLoader.load());
                 Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
                 nextStage.setTitle("IT Administrator Dashboard");
