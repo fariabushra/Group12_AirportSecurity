@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.airportsecurity.Ahsan.CommandingOfficer.AssignstaffController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <Label text="Assign Staff to Flights"
+           layoutX="20" layoutY="10"
+           style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+    <Label text="Flight ID:" layoutX="20" layoutY="60"/>
+    <TextField fx:id="flightIdField" layoutX="120" layoutY="55" prefWidth="200"/>
+
+    <Label text="Staff Name:" layoutX="20" layoutY="100"/>
+    <TextField fx:id="staffNameField" layoutX="120" layoutY="95" prefWidth="200"/>
+
+    <Button text="Assign"
+            layoutX="350" layoutY="75"
+            prefWidth="120"
+            onAction="#handleAssign"/>
+
+    <Label fx:id="statusLabel"
+           layoutX="20" layoutY="140"
+           style="-fx-font-weight: bold;" />
+
+    <TableView fx:id="assignmentTable"
+               layoutX="20" layoutY="180"
+               prefWidth="650" prefHeight="280">
+
+        <columns>
+            <TableColumn fx:id="flightColumn" text="Flight ID" prefWidth="300"/>
+            <TableColumn fx:id="staffColumn" text="Staff Name" prefWidth="350"/>
+        </columns>
+
+    </TableView>
+
+</AnchorPane>

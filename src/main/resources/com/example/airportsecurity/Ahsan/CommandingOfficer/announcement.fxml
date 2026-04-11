@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.airportsecurity.Ahsan.CommandingOfficer.AnnouncementController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <Label text="Send Announcements to Staff"
+           layoutX="20" layoutY="10"
+           style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+    <TextArea fx:id="messageArea"
+              layoutX="20" layoutY="60"
+              prefWidth="400" prefHeight="100"/>
+
+    <Button text="Send"
+            layoutX="450" layoutY="60"
+            prefWidth="120"
+            onAction="#handleSend"/>
+
+    <Label fx:id="statusLabel"
+           layoutX="20" layoutY="170"
+           style="-fx-font-weight: bold;" />
+
+    <TableView fx:id="announcementTable"
+               layoutX="20" layoutY="200"
+               prefWidth="550" prefHeight="250">
+
+        <columns>
+            <TableColumn fx:id="messageColumn"
+                         text="Announcements"
+                         prefWidth="550"/>
+        </columns>
+
+    </TableView>
+
+</AnchorPane>

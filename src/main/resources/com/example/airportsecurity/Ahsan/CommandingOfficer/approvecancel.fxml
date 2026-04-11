@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.airportsecurity.Ahsan.CommandingOfficer.ApprovecancelController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <Label text="Approve or Cancel Flights"
+           layoutX="20" layoutY="10"
+           style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+    <Label text="Flight ID:" layoutX="20" layoutY="60"/>
+    <TextField fx:id="flightIdField" layoutX="120" layoutY="55" prefWidth="200"/>
+
+    <Label fx:id="statusLabel"
+           layoutX="20" layoutY="140"
+           style="-fx-font-weight: bold;" />
+
+    <Button text="Approve"
+            layoutX="350" layoutY="55"
+            prefWidth="120"
+            onAction="#handleApprove"/>
+
+    <Button text="Cancel"
+            layoutX="350" layoutY="95"
+            prefWidth="120"
+            onAction="#handleCancel"/>
+
+    <TableView fx:id="flightTable"
+               layoutX="20" layoutY="180"
+               prefWidth="650" prefHeight="280">
+
+        <columns>
+            <TableColumn fx:id="idColumn" text="Flight ID" prefWidth="200"/>
+            <TableColumn fx:id="destinationColumn" text="Destination" prefWidth="250"/>
+            <TableColumn fx:id="statusColumn" text="Status" prefWidth="200"/>
+        </columns>
+
+    </TableView>
+
+</AnchorPane>

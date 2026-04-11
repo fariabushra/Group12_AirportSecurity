@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.airportsecurity.Ahsan.CommandingOfficer.ManageflightsController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <Label text="Manage Flights"
+           layoutX="20" layoutY="10"
+           style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+    <Label text="Flight ID:" layoutX="20" layoutY="60"/>
+    <TextField fx:id="flightIdField" layoutX="120" layoutY="55" prefWidth="200"/>
+
+    <Label text="Destination:" layoutX="20" layoutY="100"/>
+    <TextField fx:id="destinationField" layoutX="120" layoutY="95" prefWidth="200"/>
+
+    <Button text="Add Flight"
+            layoutX="350" layoutY="55"
+            prefWidth="130"
+            onAction="#handleAddFlight"/>
+
+    <Button text="Remove Flight"
+            layoutX="350" layoutY="95"
+            prefWidth="130"
+            onAction="#handleRemoveFlight"/>
+
+    <Label fx:id="statusLabel"
+           layoutX="20" layoutY="140"
+           text=""
+           style="-fx-font-weight: bold;" />
+
+    <TableView fx:id="flightTable"
+               layoutX="20" layoutY="180"
+               prefWidth="650" prefHeight="280">
+
+        <columns>
+            <TableColumn fx:id="idColumn" text="Flight ID" prefWidth="200"/>
+            <TableColumn fx:id="destinationColumn" text="Destination" prefWidth="450"/>
+        </columns>
+
+    </TableView>
+
+</AnchorPane>
