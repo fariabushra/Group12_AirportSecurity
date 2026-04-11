@@ -132,7 +132,7 @@ public class LoginController {
             usernameTextField.setText("Login Successful");
         } else if ((usernameTextField.getText().equals("Immigration Officer")) && (passwordTextField.getText().equals("1234"))) {
             try {
-                FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Habib/ImmigrationOfficer.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Ahsan/ImmigrationOfficer/dashboard2.fxml"));
                 Scene nextScene = new Scene(fxmlLoader.load());
                 Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
                 nextStage.setTitle("Immigration Officer Dashboard");

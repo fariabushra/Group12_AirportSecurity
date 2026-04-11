@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.airportsecurity.Ahsan.ImmigrationOfficer.RenewVisaController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <Label text="Visa Renewal Module"
+           layoutX="20" layoutY="10"
+           style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+    <!-- INPUTS -->
+    <TextField fx:id="nameField" layoutX="20" layoutY="50"
+               prefWidth="200" promptText="Name"/>
+
+    <TextField fx:id="visaField" layoutX="20" layoutY="90"
+               prefWidth="200" promptText="Old Visa No"/>
+
+    <TextField fx:id="docField" layoutX="20" layoutY="130"
+               prefWidth="200" promptText="Document Status"/>
+
+    <TextField fx:id="daysField" layoutX="20" layoutY="170"
+               prefWidth="200" promptText="Stay Days"/>
+
+    <!-- BUTTONS -->
+    <Button text="Receive Request" layoutX="260" layoutY="50"
+            onAction="#receiveRequest"/>
+
+    <Button text="Check Old Visa" layoutX="260" layoutY="90"
+            onAction="#checkVisa"/>
+
+    <Button text="Verify Documents" layoutX="260" layoutY="130"
+            onAction="#checkDocs"/>
+
+    <Button text="Check Stay Time" layoutX="260" layoutY="170"
+            onAction="#checkStay"/>
+
+    <Button text="Approve Renewal" layoutX="260" layoutY="210"
+            onAction="#approve"/>
+
+    <Button text="Reject Renewal" layoutX="260" layoutY="250"
+            onAction="#reject"/>
+
+    <Button text="Back" layoutX="20" layoutY="430"
+            onAction="#goBack"/>
+
+    <!-- OUTPUT -->
+    <TextArea fx:id="outputArea"
+              layoutX="20" layoutY="230"
+              prefWidth="200" prefHeight="180"
+              wrapText="true"/>
+
+</AnchorPane>

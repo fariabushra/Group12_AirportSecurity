@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.airportsecurity.Ahsan.ImmigrationOfficer.CheckVisaController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <Label text="Check Visa Module"
+           layoutX="20" layoutY="10"
+           style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+    <!-- Input Fields -->
+    <TextField fx:id="nameField" layoutX="20" layoutY="50"
+               prefWidth="200" promptText="Applicant Name"/>
+
+    <TextField fx:id="typeField" layoutX="20" layoutY="90"
+               prefWidth="200" promptText="Visa Type"/>
+
+    <TextField fx:id="expiryField" layoutX="20" layoutY="130"
+               prefWidth="200" promptText="Expiry Date"/>
+
+    <!-- Buttons -->
+    <Button text="Add Visa" layoutX="250" layoutY="50"
+            onAction="#addVisa"/>
+
+    <Button text="Approve" layoutX="250" layoutY="90"
+            onAction="#approveVisa"/>
+
+    <Button text="Reject" layoutX="250" layoutY="130"
+            onAction="#rejectVisa"/>
+
+    <Button text="Back" layoutX="20" layoutY="450"
+            onAction="#goBack"/>
+
+    <!-- TABLE VIEW -->
+    <TableView fx:id="visaTable"
+               layoutX="20" layoutY="180"
+               prefWidth="650" prefHeight="250">
+
+        <columns>
+
+            <TableColumn fx:id="nameCol" text="Applicant Name" prefWidth="160"/>
+            <TableColumn fx:id="typeCol" text="Visa Type" prefWidth="140"/>
+            <TableColumn fx:id="expiryCol" text="Expiry Date" prefWidth="140"/>
+            <TableColumn fx:id="statusCol" text="Status" prefWidth="140"/>
+
+        </columns>
+
+    </TableView>
+
+</AnchorPane>

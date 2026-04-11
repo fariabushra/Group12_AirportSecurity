@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.airportsecurity.Ahsan.ImmigrationOfficer.CheckpassportController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <Label text="Check Passport Module"
+           layoutX="20" layoutY="10"
+           style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+    <!-- INPUTS -->
+    <TextField fx:id="nameField" layoutX="20" layoutY="50"
+               prefWidth="200" promptText="Name"/>
+
+    <TextField fx:id="passportField" layoutX="20" layoutY="90"
+               prefWidth="200" promptText="Passport No"/>
+
+    <TextField fx:id="expiryField" layoutX="20" layoutY="130"
+               prefWidth="200" promptText="Expiry Date"/>
+
+    <!-- BUTTONS -->
+    <Button text="Add Passport" layoutX="250" layoutY="50"
+            onAction="#addPassport"/>
+
+    <Button text="Mark Valid" layoutX="250" layoutY="90"
+            onAction="#markValid"/>
+
+    <Button text="Mark Invalid" layoutX="250" layoutY="130"
+            onAction="#markInvalid"/>
+
+    <Button text="Back" layoutX="20" layoutY="460"
+            onAction="#goBack"/>
+
+    <!-- TABLE -->
+    <TableView fx:id="table"
+               layoutX="20" layoutY="180"
+               prefWidth="700" prefHeight="250">
+
+        <columns>
+
+            <TableColumn fx:id="nameCol" text="Name" prefWidth="180"/>
+            <TableColumn fx:id="passportCol" text="Passport No" prefWidth="180"/>
+            <TableColumn fx:id="expiryCol" text="Expiry Date" prefWidth="180"/>
+            <TableColumn fx:id="statusCol" text="Status" prefWidth="160"/>
+
+        </columns>
+
+    </TableView>
+
+</AnchorPane>
