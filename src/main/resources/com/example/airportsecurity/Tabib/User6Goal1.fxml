@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="650.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.airportsecurity.Tabib.U6G1Controller">
+
+    <children>
+
+        <Text fill="#1f4e79" layoutX="231.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create and Manage System User Accounts">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Text>
+
+        <Text fill="#2f66b3" layoutX="25.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter User Information">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Text>
+
+        <Text layoutX="25.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" />
+        <TextField fx:id="nameTextField" layoutX="140.0" layoutY="103.0" prefHeight="30.0" prefWidth="240.0" promptText="Enter full name" />
+
+        <Text layoutX="25.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee ID:" />
+        <TextField fx:id="employeeIdTextField" layoutX="140.0" layoutY="153.0" prefHeight="30.0" prefWidth="240.0" promptText="Enter employee ID" />
+
+        <Text layoutX="430.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Role:" />
+        <ChoiceBox fx:id="roleChoiceBox" layoutX="520.0" layoutY="103.0" prefHeight="30.0" prefWidth="220.0" />
+
+        <Text layoutX="430.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" />
+        <PasswordField fx:id="passwordField" layoutX="520.0" layoutY="153.0" prefHeight="30.0" prefWidth="220.0" promptText="Enter password" />
+
+        <Button layoutX="140.0" layoutY="220.0" mnemonicParsing="false" onAction="#createUserButton" prefHeight="32.0" prefWidth="120.0" text="Create User" />
+        <Button layoutX="275.0" layoutY="220.0" mnemonicParsing="false" onAction="#clearButton" prefHeight="32.0" prefWidth="100.0" text="Clear" />
+        <Button layoutX="390.0" layoutY="220.0" mnemonicParsing="false" onAction="#backButton" prefHeight="32.0" prefWidth="100.0" text="Back" />
+
+        <Label fx:id="statusLabel" layoutX="510.0" layoutY="226.0" prefHeight="20.0" prefWidth="350.0" text="Confirmation message" visible="false" />
+
+        <Text fill="#2f66b3" layoutX="25.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Existing System Users">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Text>
+
+        <TableView fx:id="userTableView" layoutX="25.0" layoutY="320.0" prefHeight="280.0" prefWidth="920.0">
+            <columns>
+                <TableColumn fx:id="serialNoColumn" prefWidth="90.0" text="Serial No" />
+                <TableColumn fx:id="nameColumn" prefWidth="230.0" text="Name" />
+                <TableColumn fx:id="employeeIdColumn" prefWidth="180.0" text="Employee ID" />
+                <TableColumn fx:id="roleColumn" prefWidth="180.0" text="Role" />
+                <TableColumn fx:id="accountStatusColumn" prefWidth="220.0" text="Account Status" />
+            </columns>
+        </TableView>
+
+    </children>
+</AnchorPane>

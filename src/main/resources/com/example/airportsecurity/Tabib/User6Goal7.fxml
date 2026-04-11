@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="620.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.airportsecurity.Tabib.U6G7Controller">
+
+    <children>
+
+        <Text fill="#1f4e79" layoutX="211.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Handle Incident System Failure (Service Restart)">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Text>
+
+        <Text fill="#2f66b3" layoutX="25.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Service Status">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Text>
+
+        <Label fx:id="alertLabel" layoutX="25.0" layoutY="100.0" prefHeight="25.0" prefWidth="320.0" style="-fx-text-fill: red; -fx-font-size: 16px; -fx-font-weight: bold;" text="Alert: Service Down" />
+
+        <TableView fx:id="serviceTableView" layoutX="25.0" layoutY="140.0" prefHeight="320.0" prefWidth="930.0">
+            <columns>
+                <TableColumn fx:id="serialNoColumn" prefWidth="90.0" text="Serial No" />
+                <TableColumn fx:id="serviceNameColumn" prefWidth="260.0" text="Service Name" />
+                <TableColumn fx:id="serviceTypeColumn" prefWidth="220.0" text="Service Type" />
+                <TableColumn fx:id="statusColumn" prefWidth="170.0" text="Status" />
+                <TableColumn fx:id="lastCheckedColumn" prefWidth="185.0" text="Last Checked" />
+            </columns>
+        </TableView>
+
+        <Button layoutX="25.0" layoutY="490.0" mnemonicParsing="false" onAction="#restartServiceButton" prefHeight="32.0" prefWidth="140.0" text="Restart Service" />
+
+        <Button layoutX="180.0" layoutY="490.0" mnemonicParsing="false" onAction="#clearSelectionButton" prefHeight="32.0" prefWidth="130.0" text="Clear Selection" />
+
+        <Button layoutX="844.0" layoutY="567.0" mnemonicParsing="false" onAction="#backButton" prefHeight="32.0" prefWidth="100.0" text="Back" />
+
+        <Label fx:id="statusLabel" layoutX="450.0" layoutY="496.0" prefHeight="20.0" prefWidth="420.0" text="Status message" visible="false" />
+
+    </children>
+</AnchorPane>

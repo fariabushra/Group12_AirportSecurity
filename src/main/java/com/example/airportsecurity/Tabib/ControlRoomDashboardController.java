@@ -28,7 +28,12 @@ public class ControlRoomDashboardController
     }
 
     @javafx.fxml.FXML
-    public void asaButton(ActionEvent actionEvent) {
+    public void asaButton(ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/com/example/airportsecurity/Tabib/User5Goal3.fxml"));
+        Stage stage = (Stage) ((javafx.scene.control.Button) actionEvent.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
     @javafx.fxml.FXML
@@ -50,7 +55,12 @@ public class ControlRoomDashboardController
     }
 
     @javafx.fxml.FXML
-    public void reaaButton(ActionEvent actionEvent) {
+    public void reaaButton(ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/com/example/airportsecurity/Tabib/User5Goal6.fxml"));
+        Stage stage = (Stage) ((javafx.scene.control.Button) actionEvent.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
     @javafx.fxml.FXML

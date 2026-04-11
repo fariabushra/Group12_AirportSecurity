@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="620.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.airportsecurity.Tabib.U6G2Controller">
+
+    <children>
+
+        <Text fill="#1f4e79" layoutX="221.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assign Role-based Permissions (RBAC)">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Text>
+
+        <Text fill="#2f66b3" layoutX="25.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Role List">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Text>
+
+        <TableView fx:id="roleTableView" layoutX="21.0" layoutY="123.0" prefHeight="220.0" prefWidth="400.0">
+            <columns>
+                <TableColumn fx:id="serialNoColumn" prefWidth="90.0" text="Serial No" />
+                <TableColumn fx:id="roleNameColumn" prefWidth="290.0" text="Role Name" />
+            </columns>
+        </TableView>
+
+        <Text fill="#2f66b3" layoutX="470.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Permissions">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Text>
+
+        <CheckBox fx:id="viewCCTVCheckBox" layoutX="470.0" layoutY="110.0" mnemonicParsing="false" text="View CCTV" />
+        <CheckBox fx:id="exportReportCheckBox" layoutX="470.0" layoutY="145.0" mnemonicParsing="false" text="Export Report" />
+        <CheckBox fx:id="createIncidentCheckBox" layoutX="470.0" layoutY="180.0" mnemonicParsing="false" text="Create Incident" />
+        <CheckBox fx:id="manageUsersCheckBox" layoutX="470.0" layoutY="215.0" mnemonicParsing="false" text="Manage Users" />
+        <CheckBox fx:id="systemBackupCheckBox" layoutX="470.0" layoutY="250.0" mnemonicParsing="false" text="System Backup" />
+
+        <Button layoutX="470.0" layoutY="310.0" mnemonicParsing="false" onAction="#saveRoleSettingsButton" prefHeight="32.0" prefWidth="160.0" text="Save Role Settings" />
+
+        <Button layoutX="645.0" layoutY="310.0" mnemonicParsing="false" onAction="#clearButton" prefHeight="32.0" prefWidth="100.0" text="Clear" />
+
+        <Button layoutX="760.0" layoutY="310.0" mnemonicParsing="false" onAction="#backButton" prefHeight="32.0" prefWidth="100.0" text="Back" />
+
+        <Label fx:id="statusLabel" layoutX="233.0" layoutY="365.0" prefHeight="26.0" prefWidth="492.0" text="Confirmation message" visible="false" />
+
+    </children>
+</AnchorPane>

@@ -45,10 +45,10 @@ public class ViewCasesController
     @javafx.fxml.FXML
     public void dashboardButton(ActionEvent actionEvent) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Faria/checkpostOfficer.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Faria/medicalEmergencyStaff.fxml"));
             Scene nextScene = new Scene(fxmlLoader.load());
             Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-            nextStage.setTitle("CheckpostOfficer Dashboard");
+            nextStage.setTitle("Medical Emergency Staff Dashboard");
             nextStage.setScene(nextScene);
             nextStage.show();
         } catch (Exception e) {

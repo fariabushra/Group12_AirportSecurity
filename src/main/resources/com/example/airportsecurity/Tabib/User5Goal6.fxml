@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="560.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.airportsecurity.Tabib.U5G6Controller">
+
+    <children>
+
+        <Text fill="#1f4e79" layoutX="93.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Report Emergency and Trigger Airport-wide Announcement">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Text>
+
+        <Text fill="#2f66b3" layoutX="25.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Emergency Report Form">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Text>
+
+        <Text layoutX="25.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Emergency Type:" />
+        <ChoiceBox fx:id="emergencyTypeChoiceBox" layoutX="160.0" layoutY="103.0" prefHeight="30.0" prefWidth="220.0" />
+
+        <Text layoutX="25.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location:" />
+        <ChoiceBox fx:id="locationChoiceBox" layoutX="160.0" layoutY="153.0" prefHeight="30.0" prefWidth="220.0" />
+
+        <Text layoutX="25.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Short Message:" />
+        <TextArea fx:id="messageTextArea" layoutX="160.0" layoutY="205.0" prefHeight="120.0" prefWidth="420.0" promptText="Write a short emergency message..." wrapText="true" />
+
+        <CheckBox fx:id="broadcastCheckBox" layoutX="160.0" layoutY="350.0" mnemonicParsing="false" text="Notify All Units" />
+
+        <Button layoutX="160.0" layoutY="395.0" mnemonicParsing="false" onAction="#confirmEmergencyButton" prefHeight="32.0" prefWidth="160.0" text="Confirm Emergency" />
+
+        <Button layoutX="335.0" layoutY="395.0" mnemonicParsing="false" onAction="#clearButton" prefHeight="32.0" prefWidth="100.0" text="Clear" />
+
+        <Button layoutX="450.0" layoutY="395.0" mnemonicParsing="false" onAction="#backButton" prefHeight="32.0" prefWidth="100.0" text="Back" />
+
+        <Label fx:id="statusLabel" layoutX="160.0" layoutY="450.0" prefHeight="25.0" prefWidth="500.0" text="Status message" visible="false" />
+
+    </children>
+</AnchorPane>
