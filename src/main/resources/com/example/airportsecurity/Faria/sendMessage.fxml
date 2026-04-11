@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.airportsecurity.Faria.SendMessageController">
+   <children>
+      <Label layoutX="84.0" layoutY="55.0" text="Select Receiver:" />
+      <ComboBox fx:id="receiverCombo" layoutX="183.0" layoutY="51.0" prefWidth="150.0" />
+      <Label layoutX="84.0" layoutY="112.0" text="Message Subject:" />
+      <Label layoutX="84.0" layoutY="159.0" text="Message Details:" />
+      <TextField fx:id="subjectField" layoutX="197.0" layoutY="108.0" prefHeight="26.0" prefWidth="208.0" />
+      <TextArea fx:id="detailsArea" layoutX="183.0" layoutY="159.0" prefHeight="81.0" prefWidth="406.0" />
+      <Button layoutX="150.0" layoutY="284.0" mnemonicParsing="false" onAction="#sendMessageButton" text="Send Message">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="feedbackLabel" layoutX="301.0" layoutY="283.0" prefHeight="30.0" prefWidth="263.0" style="-fx-background-color: yellow;" />
+      <Button layoutX="451.0" layoutY="356.0" mnemonicParsing="false" onAction="#dashboardButton" text="&lt;&lt;Dashboard">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
