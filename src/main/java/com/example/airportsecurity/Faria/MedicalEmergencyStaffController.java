@@ -15,6 +15,16 @@ public class MedicalEmergencyStaffController
 
     @javafx.fxml.FXML
     public void updatePatientStatusButton(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Faria/patientStatusUpdate.fxml"));
+            Scene nextScene = new Scene(fxmlLoader.load());
+            Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            nextStage.setTitle("Patient Status Update");
+            nextStage.setScene(nextScene);
+            nextStage.show();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @javafx.fxml.FXML
